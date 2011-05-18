@@ -494,7 +494,6 @@ input[type=submit]:focus{
 }
 .single.hentry{
   border-top: 1px solid #efefef;
-  margin-top: -50px;
   border-bottom: none;
   padding-bottom: 0;
 }
