@@ -1072,4 +1072,4 @@ a.comment-edit-link:visited{
 /* zinnia */
 #coreContent .errorlist {width: auto;}
 #coreContent .errorlist li {list-style: none; color: red; font-size: 10px; padding: 0; margin: 0;}
-h1.tag, h1.category {padding-bottom: 60px; }
+.title-spacer {display: block; clear: both; height: 60px;}

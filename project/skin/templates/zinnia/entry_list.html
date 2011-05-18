@@ -21,15 +21,17 @@
 {% block content %}
 
 {% if category %}
-  <h1 class="category">{{ category.title }}</h1>
+  <h1>{{ category.title }}</h1>
   {% if category.description %}
     <p>{{ category.description|striptags|safe }}</p>
   {% endif %}
 {% endif %}
 
 {% if tag %}
-  <h1 class="tag">{% trans "Tag" %} : {{ tag }}</h1>
+  <h1>{% trans "Tag" %} : {{ tag }}</h1>
 {% endif %}
+
+<div class="title-spacer"></div>
 
 {% if author %}
 <h1>{% blocktrans with author.username as author %}Entries by {{ author }}{% endblocktrans %}</h1>
