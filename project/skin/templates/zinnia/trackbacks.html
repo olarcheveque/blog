@@ -1,0 +1,24 @@
+{% load i18n tagging_tags comments zinnia_tags %}
+
+<div id="trackbacks" class="spread">
+  <h3>{% trans "Trackbacks" %}</h3>
+  {% with object.trackbacks as trackback_list %}
+  {% if trackback_list.count %}
+  <ol id="trackback-list" class="span-15 last">
+    {% for trackback in trackback_list %}
+    <li id="trackback_{{ trackback.pk }}" class="trackback {% cycle box1,box2 %} span-15 last">
+      <div class="trackback-body span-15 last">
+	      <div class="trackback-author span-15 last">
+	        <a href="{{ trackback.url }}">{{ trackback.user_name }}</a>
+	        {% trans "on" %} {{ trackback.submit_date|date:"SHORT_DATETIME_FORMAT" }}
+	      </div>
+	      <div>
+	        <cite>{{ trackback.comment }}</cite>
+	      </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+  {% endwith %}
+</div>

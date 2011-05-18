@@ -1,0 +1,35 @@
+{% load i18n tagging_tags comments zinnia_tags %}
+
+{% if object.pingback_enabled %}
+  <p><a href="{% url zinnia_entry_trackback object.slug %}" rel="trackback">{% trans "Trackback URL" %}</a></p>
+{% endif %}
+
+<div id="pingbacks" class="spread">
+  <h3>{% trans "Pingbacks" %}</h3>
+  {% with object.pingbacks as pingback_list %}
+  {% if pingback_list.count %}
+  <ol id="pingback-list" class="span-15 last">
+    {% for pingback in pingback_list %}
+    <li id="pingback_{{ pingback.pk }}" class="pingback {% cycle box1,box2 %} span-15 last">
+      <div class="pingback-body span-15 last">
+	<div class="pingback-author span-15 last">
+	  <a href="{{ pingback.url }}">{{ pingback.user_name }}</a>
+	  {% trans "on" %} {{ pingback.submit_date|date:"SHORT_DATETIME_FORMAT" }}
+	</div>
+	<div class="span-15 last">
+	  <cite>
+	    {{ pingback.comment }}
+	  </cite>
+	</div>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+    {% if object.pingback_enabled %}
+  <p>{% trans "Pingbacks are open." %}</p>
+    {% else %}
+  <p>{% trans "Pingbacks are closed." %}</p>
+    {% endif %}
+  {% endwith %}
+</div>

@@ -1,0 +1,34 @@
+{% load i18n tagging_tags comments zinnia_tags %}
+
+<div class="postMeta">
+
+  <div class="postDate">
+    <span>{% trans "date" %} : </span>
+    <abbr title="2009-02-25T14:28:27+0000" class="published">
+      <a href="{{ object.get_absolute_url }}">
+        {{ object.creation_date|date:"DATE_FORMAT" }}
+      </a>
+    </abbr>
+  </div>
+
+  <div class="categories">
+    {% if object.categories.count %}
+      <span>{% trans "in" %} : </span>
+      {% for category in object.categories.all %}
+        <a href="{{ category.get_absolute_url }}" title="{{ category }}" rel="tag category">{{ category }}</a>
+      {% if not forloop.last %}, {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <div class="tags">
+    {% tags_for_object object as tag_list %}
+    {% if tag_list %}
+      <span>{% trans "Tags" %} : </span>
+      {% for tag in tag_list %}
+        <a href="{% url zinnia_tag_detail tag %}" title="Tag {{ tag }}" rel="tag">{{ tag }}</a>
+    {% endfor %}
+    {% endif %}
+  </div>
+
+</div>
