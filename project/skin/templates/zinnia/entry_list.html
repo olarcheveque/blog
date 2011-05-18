@@ -31,46 +31,15 @@
   <h1>{% trans "Tag" %} : {{ tag }}</h1>
 {% endif %}
 
-<div class="title-spacer"></div>
-
 {% if author %}
 <h1>{% blocktrans with author.username as author %}Entries by {{ author }}{% endblocktrans %}</h1>
 {% endif %}
 
 {% for object in object_list %}
-  <div class="post hentry">
-    <h5 class="postDate"><abbr class="published">{{ object.creation_date|date:"d M Y" }}</abbr></h5>
-    <div class="postContent">
-      <h3 class="entry-title"><a rel="bookmark" href="{{ object.get_absolute_url }}">{{ object.title }}</a></h3>
-      <div class="entry-content">
-        {% with object.html_content|truncatewords_html:100|safe as object_content %}
-        {{ object_content }}
-        {% endwith %}
-      </div>
-    </div>
-    <div class="postMeta">
-      <div class="comments">
-        {% with object.comments as comment_list %}
-        <a title="{% trans "comments" %}" href="{{ object.get_absolute_url }}">{{ comment_list.count }} 
-        {% if comment_list.count > 1%}{% trans "comments" %}{% else %}{% trans "comment" %}{% endif %}
-        </a>
-        {% endwith %}
-      </div>
-    </div>
-  </div>
+  {% include "zinnia/entry_overview.html" %}
 {% empty %}
   {% trans "No entries yet." %}
 {% endfor %}
-
-
-{% comment %}
-<div id="entry-{{ object.pk }}" class="hentry{% if object.featured %} featured{% endif %} span-16 last">
-  {% with object.html_content|truncatewords_html:100|safe as object_content %}
-  {% include "zinnia/_entry_detail.html" %}
-  {% endwith %}
-</div>
-<hr />
-{% endcomment %}
 
 {% if is_paginated %}
   {% zinnia_pagination page_obj %}

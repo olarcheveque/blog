@@ -7,9 +7,9 @@
     <meta http-equiv="cache-control" content="public" />
     <meta name="robots" content="follow, all" />
     <meta name="language" content="{{ LANGUAGE_CODE }}" />
-    <meta name="description" content="{% block meta-description %}Demonstration of the Zinnia Blog application.{% endblock %}" />
+    <meta name="description" content="{% block meta-description %}Blog de développeur{% endblock %}" />
     <meta name="keywords" content="{% block meta-keywords %}django, blog, zinnia, {{ tag_entry|join:", "}}{% endblock %}" />
-    <meta name="author" content="Fantomas42" />
+    <meta name="author" content="Olivier Larchevêque" />
     {% block meta %}{% endblock %}
     <link rel="pingback" href="/xmlrpc/" />
     <link rel="shortcut icon" href="{{ ZINNIA_MEDIA_URL }}img/favicon.ico" />
@@ -27,28 +27,27 @@
   <body>
     <div id="siteWrapper">
 	    <div class="top-navigation">
-	      <a href="{% url zinnia_sitemap %}" title="{% trans "Sitemap" %}" class="link sitemap">
-	        {% trans "Sitemap" %}
-	      </a> |
 	      <a href="{% url zinnia_entry_latest_feed %}" title="{% trans "RSS Feed of latest entries" %}" class="link feeds">
 	        {% trans "RSS Feed" %}
 	      </a>
 	    </div>
 	    <h1 class="vcard author">
-	      <a class="fn" href="{% url zinnia_entry_archive_index %}" title="Zinnia's Blog" rel="home">
-	        MANIFEST 
+	      <a class="fn" href="{% url zinnia_entry_archive_index %}" title="Blog de l'usinasite" rel="home">
+	        Blog de l'USINASITE
 	      </a>
 	    </h1>
 
       <div id="mainNav">
         <ul>
-          <li ><a  href="">Sample</a></li>
-          <li ><a  href="">Sample</a></li>
-          <li ><a  href="">Sample</a></li>
+          <li ><a href="{% url zinnia_entry_archive_index %}">Articles</a></li>
+          <li ><a href="{% url zinnia_sitemap %}">{% trans "Sitemap" %}</a></li>
+          <li ><a href="#search">Rechercher</a></li>
         </ul>
       </div>
 
-      <div id="siteDescription">Un blog...</div>
+      <div id="siteDescription">
+        Bienvenue sur le blog d'Olivier Larchevêque, vous y trouverez des articles relatifs au développement, surtout en Python.
+      </div>
 
       <div id="coreContent">
 	      {% block content %}

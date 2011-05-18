@@ -135,8 +135,6 @@ h4{
   color: #333;
 }
 h5{
-  position: relative;
-  top: -35px;
   margin-bottom: 50px;
   font-family: "helvetica neue", helvetica, arial;
   font-size: 1.2em;
@@ -204,7 +202,7 @@ input[type=submit]:focus{
 }
 #siteDescription{
   font-size: 1.2em;
-  margin: 10px auto 60px;
+  margin: 10px auto 20px;
   width: 400px;
   padding: 11px 0 13px;
   color: #999;
@@ -309,7 +307,6 @@ input[type=submit]:focus{
 #coreContent{
   float: left;
   width: 500px;
-  margin-top: 8px;
 }
 
 /* Posts
@@ -362,7 +359,6 @@ input[type=submit]:focus{
 .hentry{
   position: relative;
   padding-bottom: 37px;
-  border-bottom: 1px dotted #ddd;
   margin-bottom: 30px;
 }
 #coreContent .postMeta{
@@ -756,7 +752,6 @@ legend span{
   max-width: 500px; /* Restricts the resizing capability in webkit bases browsers */
 }
 .commentForm input[type=submit]{
-  float: right;
   margin-top: 8px;
 }
 .comment #respond{
@@ -1072,4 +1067,57 @@ a.comment-edit-link:visited{
 /* zinnia */
 #coreContent .errorlist {width: auto;}
 #coreContent .errorlist li {list-style: none; color: red; font-size: 10px; padding: 0; margin: 0;}
-.title-spacer {display: block; clear: both; height: 60px;}
+#searchform {margin-bottom: 2em; }
+
+/* Sitemap
+-------------------------------------------------------------------- */
+
+#coreContent .entriesbycategories h4 {
+  text-align: left; font-variant: small-caps; margin: 0px;
+}
+
+#coreContent .montharchives h3,
+#coreContent .categories h3,
+#coreContent .entriesbycategories h3,
+#coreContent .allentries h3 {
+  font-family: constantia, palatino, times new roman;
+  font-size: 1.6em;
+  text-align: left;
+  color: #333;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0 0 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+#coreContent .montharchives,
+#coreContent .categories,
+#coreContent .allentries,
+#coreContent .entriesbycategories  {
+  margin-bottom: 20px;
+}
+
+#coreContent .montharchives li,
+#coreContent .categories li,
+#coreContent .allentries li,
+#coreContent .entriesbycategories li {
+    border-bottom: 1px solid #EFEFEF;
+    display: block;
+    list-style: none outside none;
+    margin: 0;
+    padding: 5px 0;
+    color: #999999;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+#coreContent .montharchives a,
+#coreContent .categories a,
+#coreContent .allentries a,
+#coreContent .entriesbycategories a {
+  font-size: 1.1em;
+}
+
+#coreContent .allentries .postDate{
+  float: right;
+}
