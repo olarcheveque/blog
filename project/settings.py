@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.sessions',
     'django.contrib.admin',
+    'django.contrib.markup',
     'south',
     'tagging',
     'mptt',
