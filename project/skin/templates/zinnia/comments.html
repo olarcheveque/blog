@@ -4,7 +4,7 @@
   <h3>{% trans "Comments" %}</h3>
   {% with object.comments as comment_list %}
   {% if comment_list.count %}
-
+    <a name="comments"></a>
     <ol id="comment-list" class="span-15 last">
       {% for comment in comment_list %}
 

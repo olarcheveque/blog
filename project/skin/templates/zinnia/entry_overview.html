@@ -13,7 +13,7 @@
   <div class="postMeta">
     <div class="comments">
       {% with object.comments as comment_list %}
-      <a title="{% trans "comments" %}" href="{{ object.get_absolute_url }}">{{ comment_list.count }} 
+      <a title="{% trans "comments" %}" href="{{ object.get_absolute_url }}#comments">{{ comment_list.count }} 
       {% if comment_list.count > 1%}{% trans "comments" %}{% else %}{% trans "comment" %}{% endif %}
       </a>
       {% endwith %}
