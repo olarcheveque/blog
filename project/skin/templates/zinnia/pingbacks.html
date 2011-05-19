@@ -1,8 +1,7 @@
 {% load i18n tagging_tags comments zinnia_tags %}
 
 {% if object.pingback_enabled %}
-  <p><a href="{% url zinnia_entry_trackback object.slug %}" rel="trackback">{% trans "Trackback URL" %}</a></p>
-{% endif %}
+<p><a href="{% url zinnia_entry_trackback object.slug %}" rel="trackback">{% trans "Trackback URL" %}</a></p>
 
 <div id="pingbacks" class="spread">
   <h3>{% trans "Pingbacks" %}</h3>
@@ -33,3 +32,4 @@
     {% endif %}
   {% endwith %}
 </div>
+{% endif %}

@@ -1075,6 +1075,7 @@ a.comment-edit-link:visited{
   text-align: left; font-variant: small-caps; margin: 0px;
 }
 
+#coreContent .tags h3,
 #coreContent .montharchives h3,
 #coreContent .categories h3,
 #coreContent .entriesbycategories h3,
@@ -1089,6 +1090,7 @@ a.comment-edit-link:visited{
   border-bottom: 1px solid #ccc;
 }
 
+#coreContent .tags,
 #coreContent .montharchives,
 #coreContent .categories,
 #coreContent .allentries,
@@ -1096,6 +1098,7 @@ a.comment-edit-link:visited{
   margin-bottom: 20px;
 }
 
+#coreContent .tags li {display: inline; }
 #coreContent .montharchives li,
 #coreContent .categories li,
 #coreContent .allentries li,
