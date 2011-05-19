@@ -11,6 +11,7 @@ MANAGERS = ADMINS
 TIME_ZONE = 'America/Chicago'
 
 LANGUAGE_CODE = 'fr-ca'
+DATE_FORMAT = 'd M Y'
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
