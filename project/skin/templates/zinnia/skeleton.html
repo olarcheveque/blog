@@ -22,9 +22,14 @@
     <![endif]-->
     {% block link %}{% endblock %}
     {% block script %}{% endblock %}
-    <title> USINASITE Blog - {% block title %}{% endblock %}</title>
+    <title>{% trans "Blog Title" %} - {% block title %}{% endblock %}</title>
   </head>
   <body>
+
+    <div id="sidebar">
+	    {% block sidebar %}{% endblock %}
+    </div>
+
     <div id="siteWrapper">
 	    <div class="top-navigation">
 	      <a href="{% url zinnia_entry_latest_feed %}" title="{% trans "RSS Feed of latest entries" %}" class="link feeds">
@@ -32,21 +37,21 @@
 	      </a>
 	    </div>
 	    <h1 class="vcard author">
-	      <a class="fn" href="{% url zinnia_entry_archive_index %}" title="Blog de l'usinasite" rel="home">
-	        Blog de l'USINASITE
+	      <a class="fn" href="{% url zinnia_entry_archive_index %}" title="{% trans "Blog Title" %}" rel="home">
+          {% trans "Blog Title" %}
 	      </a>
 	    </h1>
 
       <div id="mainNav">
         <ul>
-          <li ><a href="{% url zinnia_entry_archive_index %}">Articles</a></li>
+          <li ><a href="{% url zinnia_entry_archive_index %}">{% trans "Articles" %}</a></li>
           <li ><a href="{% url zinnia_sitemap %}">{% trans "Sitemap" %}</a></li>
-          <li ><a href="#search">Rechercher</a></li>
+          <li ><a href="#search">{% trans "Search" %}</a></li>
         </ul>
       </div>
 
       <div id="siteDescription">
-        Bienvenue sur le blog d'Olivier Larchevêque, vous y trouverez des articles relatifs au développement, surtout en Python.
+        {% trans "Site Description" %}
       </div>
 
       <div id="coreContent">
@@ -54,8 +59,6 @@
 	      <h3>The content block need to be overrided!</h3>
 	      {% endblock %}
 
-	      {% block sidebar %}
-	      {% endblock %}
 	    </div>
     </div>
 
