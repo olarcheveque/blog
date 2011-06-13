@@ -172,9 +172,6 @@ input[type=submit]{
   color: #fff;
   font-weight: bold;
   background-color: #8EA7AA;
-  background-image: url(images/button.png);
-  background-repeat: repeat-x;
-  background-position: left top;
   border-width: 1px;
   border-style: solid;
   border-color: #999;
@@ -355,6 +352,18 @@ input[type=submit]:focus{
 .entry-content a:visited{
   text-decoration: underline;
 }
+
+.entry-content a.read {
+    font-size: 1.3em;
+    margin-top: 10px;
+    color: #999999;
+    text-decoration: none;
+}
+
+.entry-content a.read:hover {
+  text-decoration: underline;
+}
+
 .hentry{
   position: relative;
   padding-bottom: 37px;
@@ -1136,3 +1145,4 @@ a.comment-edit-link:visited{
   border-bottom: 1px solid #ccc;
   margin-top: 2em;
 }
+

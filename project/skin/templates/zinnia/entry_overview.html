@@ -8,6 +8,7 @@
       {% with object.excerpt|markdown|safe as object_content %}
       {{ object_content }}
       {% endwith %}
+      <a class="read" href="{{ object.get_absolute_url }}">{% trans "read" %}</a>
     </div>
   </div>
   <div class="postMeta">

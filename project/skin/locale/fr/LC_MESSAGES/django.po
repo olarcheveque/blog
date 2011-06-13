@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-18 19:55-0500\n"
+"POT-Creation-Date: 2011-06-13 06:57-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Olivier Larchevêque <olivier.larcheveque@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgid "Preview of the comment"
 msgstr ""
 
 #: templates/comments/zinnia_entry_preview.html:25
-#: templates/zinnia/_entry_detail.html:18 templates/zinnia/pingbacks.html:17
+#: templates/zinnia/_entry_detail.html:18 templates/zinnia/pingbacks.html:16
 #: templates/zinnia/trackbacks.html:13
 msgid "on"
 msgstr ""
@@ -69,7 +69,8 @@ msgid "in"
 msgstr ""
 
 #: templates/zinnia/_entry_detail.html:47 templates/zinnia/actions.html:30
-#: templates/zinnia/entry_meta.html:27 templates/zinnia/tag_list.html:6
+#: templates/zinnia/entry_meta.html:27 templates/zinnia/sitemap.html:67
+#: templates/zinnia/tag_list.html:6
 msgid "Tags"
 msgstr ""
 
@@ -153,7 +154,7 @@ msgstr ""
 msgid "Calendar"
 msgstr ""
 
-#: templates/zinnia/actions.html:36
+#: templates/zinnia/actions.html:36 templates/zinnia/sitemap.html:73
 msgid "entries"
 msgstr ""
 
@@ -250,7 +251,7 @@ msgid "Daily archives"
 msgstr ""
 
 #: templates/zinnia/entry_archive_year.html:13
-#: templates/zinnia/sitemap.html:67
+#: templates/zinnia/sitemap.html:81
 msgid "Monthly archives"
 msgstr ""
 
@@ -355,12 +356,16 @@ msgstr ""
 msgid "Next entry"
 msgstr ""
 
-#: templates/zinnia/entry_overview.html:16
+#: templates/zinnia/entry_overview.html:11
+msgid "read"
+msgstr "Lire la suite"
+
 #: templates/zinnia/entry_overview.html:17
+#: templates/zinnia/entry_overview.html:18
 msgid "comments"
 msgstr ""
 
-#: templates/zinnia/entry_overview.html:17 templates/zinnia/sitemap.html:18
+#: templates/zinnia/entry_overview.html:18 templates/zinnia/sitemap.html:18
 #: templates/zinnia/sitemap.html.py:37
 #: templates/zinnia/tags/popular_entries.html:8
 msgid "comment"
@@ -434,15 +439,15 @@ msgstr ""
 msgid "Trackback URL"
 msgstr ""
 
-#: templates/zinnia/pingbacks.html:8
+#: templates/zinnia/pingbacks.html:7
 msgid "Pingbacks"
 msgstr ""
 
-#: templates/zinnia/pingbacks.html:30
+#: templates/zinnia/pingbacks.html:29
 msgid "Pingbacks are open."
 msgstr ""
 
-#: templates/zinnia/pingbacks.html:32
+#: templates/zinnia/pingbacks.html:31
 msgid "Pingbacks are closed."
 msgstr ""
 
@@ -474,7 +479,9 @@ msgstr ""
 
 #: templates/zinnia/skeleton.html:54
 msgid "Site Description"
-msgstr "Bienvenue sur le blog d'Olivier Larchevêque, vous y trouverez des articles relatifs au développement, surtout en Python."
+msgstr ""
+"Bienvenue sur le blog d'Olivier Larchevêque, vous y trouverez des articles "
+"relatifs au développement, surtout en Python."
 
 #: templates/zinnia/tag_list.html:4 templates/zinnia/tag_list.html.py:9
 msgid "Tag list"
