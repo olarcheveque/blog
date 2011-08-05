@@ -54,6 +54,7 @@ INSTALLED_APPS = (
     'tagging',
     'mptt',
     'zinnia',
+    'sentry.client',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
