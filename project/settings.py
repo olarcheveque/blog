@@ -54,6 +54,7 @@ INSTALLED_APPS = (
     'tagging',
     'mptt',
     'zinnia',
+    'project.contact',
     'sentry.client',
 )
 
