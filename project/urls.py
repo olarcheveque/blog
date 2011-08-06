@@ -9,6 +9,7 @@ handler500 # Pyflakes
 urlpatterns = patterns(
     '',
     url(r'^$', 'project.views.index'),
+    url(r'^blog/', include('project.contact.urls')),
     url(r'^blog/', include('zinnia.urls')),
     url(r'^comments/', include('django.contrib.comments.urls')),
     (r'^admin/', include(admin.site.urls)),

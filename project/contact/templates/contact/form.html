@@ -1,0 +1,18 @@
+{% extends "zinnia/base.html" %}
+{% load i18n comments zinnia_tags %}
+
+{% block title %}{% endblock %}
+
+{% block meta-description %}{% endblock %}
+
+{% block content %}
+
+<form class="contact" action="" method="post">
+  {{ form.as_p }}
+  <p>
+  <input type="submit" value="Envoyer" />
+  </p>
+</form>
+
+{% endblock content %}
+
