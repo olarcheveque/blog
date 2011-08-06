@@ -1,1 +1,13 @@
 #job {position: absolute; right: 0px; margin-right: -85px; top: 63px;}
+
+
+ul.messages {margin: 2em 0;}
+ul.messages li {font-size: 1.3em;}
+ul.messages li.error {color: red;}
+ul.messages li.info {color: green;}
+
+.contact p  {clear: both; }
+.contact p * {float: left; margin: 8px 0px;}
+.contact p label {width: 100px; }
+.contact p input[type='text'] {width: 301px; }
+.contact ul.errorlist * {float: left;}
