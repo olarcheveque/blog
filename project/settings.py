@@ -57,6 +57,7 @@ INSTALLED_APPS = (
     'zinnia',
     'project.contact',
     'sentry.client',
+    'django_vu.client',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
