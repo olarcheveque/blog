@@ -28,7 +28,6 @@
   <body class="zinnia {% block body-class %}{% endblock %}">
     <div class="container">
       <div id="header">
-        <a href="/blog/contact/" id="job"><img src="{{ STATIC_URL }}skin/img/job.jpg"></a>
         <ul class="top-navigation">
           <li>
             <a href="{% url zinnia_sitemap %}" title="{% trans "Sitemap" %}" class="sitemap">
@@ -59,8 +58,10 @@
       </div>
       <div id="sidebar">
         <div class="welcome">
-          <h3>Bienvenue!</h3>
-          <p>Bienvenue sur le blog d'Olivier Larchevêque, vous y trouverez des articles relatifs au développement, surtout en Python.</p>
+          <h3>Recruter</h3>
+          <a href="/blog/contact/" id="job"><img src="{{ STATIC_URL }}skin/img/job.jpg"></a>
+          <p>Je suis présentement disponible</p>
+          <p>&nbsp;</p>
         </div>
         {% block sidebar %}
         {% endblock %}

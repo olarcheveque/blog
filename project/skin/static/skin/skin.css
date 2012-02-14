@@ -22,10 +22,12 @@ body.zinnia {
 
 #header blockquote {
     margin: 0;
+    font-size: 1em;
 }
 
 #header {
     margin-top: 2em;
+    padding-bottom: 0.4em;
 }
 
 #header .top-navigation {
@@ -90,8 +92,24 @@ h2.entry-title {
     text-shadow: none;
 }
 
+.welcome {
+    position: relative;
+}
+.welcome p {
+    margin-right: 122px;
+}
+
 #job {
     position: absolute;
-    left: 66em;
-    top: 1em;
+    right: 0;
+    top: 0;
+}
+
+.entry-content h1 {font-size: 1.6em;}
+.entry-content h2 {font-size: 1em; font-weight: bold; }
+
+.hentry {
+    padding: 1em 2em;
+    background: none repeat scroll 0 0 #FBFBFB;
+    margin-top: 10px;
 }
