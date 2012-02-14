@@ -31,4 +31,5 @@ parts
 tmp
 
 # Project specifics
-project/media/families/*
+project/media
+project/static

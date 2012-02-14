@@ -1,4 +1,5 @@
 import os
+from django.conf import global_settings
 from conf import *
 
 ADMINS = (
@@ -8,7 +9,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Montreal'
 
 LANGUAGE_CODE = 'fr-ca'
 DATE_FORMAT = 'd M Y'
@@ -16,28 +17,16 @@ DATE_FORMAT = 'd M Y'
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'media')
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'static')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/media/'
-
-# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
-# trailing slash.
-# Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/django/'
+STATIC_URL = '/static/'
 
 # Don't share this with anybody.
 SECRET_KEY = 'nxf$j(qr-95@mtke9@*-$!=pb@ri0pb9cq*56a7#vxdca&b1ic'
-
-MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.middleware.doc.XViewMiddleware',
-)
 
 ROOT_URLCONF = 'project.urls'
 
@@ -51,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.admin',
     'django.contrib.markup',
+    'django.contrib.staticfiles',
     'south',
     'tagging',
     'mptt',
@@ -60,14 +50,9 @@ INSTALLED_APPS = (
     'django_vu.client',
 )
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-  'django.core.context_processors.auth',
-  'django.core.context_processors.i18n',
+TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
   'django.core.context_processors.request',
-  'django.core.context_processors.media',
-  'django.core.context_processors.csrf',
-  'zinnia.context_processors.version', # Optional
-  'zinnia.context_processors.media',
+  'django.core.context_processors.static',
 )
 
 

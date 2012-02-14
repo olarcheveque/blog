@@ -1,0 +1,97 @@
+body.zinnia {
+  background: #fff;
+  font: 76.5% palatino, "times new roman", serif;
+  color: #333;
+}
+
+
+#header h1 {
+    font-size: 3.3em;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    margin: 10px 0 20px;
+    text-transform: uppercase;
+    word-spacing: -0.1em;
+    text-shadow: none;
+}
+
+#header h1:first-letter {
+    color: #000000;
+    font-size: 100%;
+}
+
+#header blockquote {
+    margin: 0;
+}
+
+#header {
+    margin-top: 2em;
+}
+
+#header .top-navigation {
+    margin: -2em 0 0;
+}
+
+.zinnia h1, .zinnia h2, .zinnia h3 {color: #333333;}
+
+.zinnia form legend,
+#widget-tags ul.tags .tag-1,
+.zinnia a:link, .zinnia a:visited {
+    color: #9C8A6A;
+    text-decoration: none;
+}
+
+.zinnia a:hover, .zinnia a:active {
+    color: #3E372B;
+    text-decoration: underline;
+}
+
+.zinnia h1 a:link, .zinnia h1 a:visited,
+.zinnia h2 a:link, .zinnia h2 a:visited {
+    color: #333333;
+}
+
+.zinnia h1 a:hover, .zinnia h1 a:active,
+.zinnia h2 a:hover, .zinnia h2 a:active {
+    color: #333333;
+    text-decoration: underline;
+}
+
+#widget-calendar {display: none;}
+.zinnia h2 {
+    font-size: 2.3em;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+#sidebar h3 {
+    background: none repeat scroll 0 0 #FBFBFB;
+    border-bottom: 1px solid #EAEAEA;
+    border-top: 1px solid #EAEAEA;
+    margin-top: 10px;
+    padding: 5px;
+    color: #999999;
+}
+
+p.entry-info {
+    background: none;
+    padding: 0;
+}
+
+ul.breadcrumbs {
+    font-size: 1.4em;
+}
+
+#widget-search input[type="text"] {
+    width: 68%;
+}
+
+h2.entry-title {
+    text-shadow: none;
+}
+
+#job {
+    position: absolute;
+    left: 66em;
+    top: 1em;
+}

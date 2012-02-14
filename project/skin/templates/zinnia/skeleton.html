@@ -1,95 +1,73 @@
-{% load zinnia_tags tagging_tags i18n %}
-{% tags_for_model zinnia.entry as tag_entry %}
+{% load zinnia_tags i18n %}
+{% get_tags as entry_tags %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <title>Zinnia's Blog - {% block title %}{% endblock %}</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="cache-control" content="public" />
     <meta name="robots" content="follow, all" />
     <meta name="language" content="{{ LANGUAGE_CODE }}" />
-    <meta name="description" content="{% block meta-description %}Blog de développeur{% endblock %}" />
-    <meta name="keywords" content="{% block meta-keywords %}django, blog, zinnia, {{ tag_entry|join:", "}}{% endblock %}" />
-    <meta name="author" content="Olivier Larchevêque" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+    <meta name="description" content="{% block meta-description %}Python Blog.{% endblock %}" />
+    <meta name="keywords" content="{% block meta-keywords %}django, blog, zinnia, {{ entry_tags|join:", "}}{% endblock %}" />
+    <meta name="author" content="Fantomas42" />
     {% block meta %}{% endblock %}
     <link rel="pingback" href="/xmlrpc/" />
-    <link rel="shortcut icon" href="{{ ZINNIA_MEDIA_URL }}img/favicon.ico" />
+    <link rel="shortcut icon" href="{{ STATIC_URL }}zinnia/img/favicon.ico" />
     <link rel="home" href="{% url zinnia_entry_archive_index %}" />
-    <!--link rel="stylesheet" type="text/css" media="screen, projection" href="{{ ZINNIA_MEDIA_URL }}css/screen.css" /-->
-    <!--link rel="stylesheet" type="text/css" media="print" href="{{ ZINNIA_MEDIA_URL }}css/print.css" /-->
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ ZINNIA_MEDIA_URL }}css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ MEDIA_URL }}skin/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}zinnia/css/screen.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}zinnia/css/print.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ STATIC_URL }}skin/skin.css" />
     <!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" media="screen, projection" href="{{ ZINNIA_MEDIA_URL }}css/ie.css" />
+        <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}zinnia/css/ie.css" />
     <![endif]-->
     {% block link %}{% endblock %}
     {% block script %}{% endblock %}
-    <title>{% trans "Blog Title" %} - {% block title %}{% endblock %}</title>
   </head>
-  <body>
-
-    <div id="sidebar">
-	    {% block sidebar %}{% endblock %}
-    </div>
-
-    <div id="siteWrapper">
-      <a id="job" href="{% url contact %}"><img src='{{ MEDIA_URL }}skin/img/job.jpg' /></a>
-	    <div class="top-navigation">
-	      <a href="{% url zinnia_entry_latest_feed %}" title="{% trans "RSS Feed of latest entries" %}" class="link feeds">
-	        {% trans "RSS Feed" %}
-	      </a>
-	    </div>
-	    <h1 class="vcard author">
-	      <a class="fn" href="{% url zinnia_entry_archive_index %}" title="{% trans "Blog Title" %}" rel="home">
-          {% trans "Blog Title" %}
-	      </a>
-	    </h1>
-
-      <div id="mainNav">
-        <ul>
-          <li ><a href="{% url zinnia_entry_archive_index %}">{% trans "Articles" %}</a></li>
-          <li ><a href="{% url zinnia_sitemap %}">{% trans "Sitemap" %}</a></li>
-          <li ><a href="#search">{% trans "Search" %}</a></li>
+  <body class="zinnia {% block body-class %}{% endblock %}">
+    <div class="container">
+      <div id="header">
+        <a href="/blog/contact/" id="job"><img src="{{ STATIC_URL }}skin/img/job.jpg"></a>
+        <ul class="top-navigation">
+          <li>
+            <a href="{% url zinnia_sitemap %}" title="{% trans "Sitemap" %}" class="sitemap">
+              {% trans "Sitemap" %}
+            </a>
+          </li>
+          <li>
+            <a href="{% url zinnia_entry_latest_feed %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds">
+              {% trans "RSS Feed" %}
+            </a>
+          </li>
         </ul>
+        <h1>
+          <a href="{% url zinnia_entry_archive_index %}" title="Usinasite's Blog" rel="home">
+            Blog de l'USINASITE
+          </a>
+        </h1>
+        <blockquote>
+          <p>Bienvenue sur le blog d'Olivier Larchevêque, vous y trouverez des articles relatifs au développement, surtout en Python.</p>
+        </blockquote>
+        {% block breadcrumbs %}{% endblock %}
       </div>
-
-      <div id="siteDescription">
-        {% trans "Site Description" %}
+      {% block slider %}{% endblock %}
+      <div id="content" class="hfeed">
+        {% block content %}
+        <h3>The content block need to be overrided!</h3>
+        {% endblock %}
       </div>
-
-
-      {% if messages %}
-      <ul class="messages">
-        {% for message in messages %}
-          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-
-      <div id="coreContent">
-	      {% block content %}
-	      <h3>The content block need to be overrided!</h3>
-	      {% endblock %}
-
-	    </div>
+      <div id="sidebar">
+        <div class="welcome">
+          <h3>Bienvenue!</h3>
+          <p>Bienvenue sur le blog d'Olivier Larchevêque, vous y trouverez des articles relatifs au développement, surtout en Python.</p>
+        </div>
+        {% block sidebar %}
+        {% endblock %}
+      </div>
+      <div id="footer">
+        <p>Powered by <a href="http://www.djangoproject.com">Django</a> and <a href="http://github.com/Fantomas42/django-blog-zinnia">Zinnia {{ ZINNIA_VERSION }}</a>.</p>
+      </div>
     </div>
-
-    {% include "zinnia/footer.html" %}
-
-  <script type="text/javascript">
-  
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-23492468-1']);
-    _gaq.push(['_trackPageview']);
-  
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  
-  </script>
-
   </body>
 </html>
-
-
