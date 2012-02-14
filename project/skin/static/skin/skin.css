@@ -37,7 +37,8 @@ body.zinnia {
 .zinnia h1, .zinnia h2, .zinnia h3 {color: #333333;}
 
 .zinnia form legend,
-#widget-tags ul.tags .tag-1,
+#widget-tags ul.tags li a.tag-1,
+#widget-tags ul.tags li a.tag-2,
 .zinnia a:link, .zinnia a:visited {
     color: #9C8A6A;
     text-decoration: none;
