@@ -39,6 +39,10 @@ body.zinnia {
 .zinnia form legend,
 #widget-tags ul.tags li a.tag-1,
 #widget-tags ul.tags li a.tag-2,
+#widget-tags ul.tags li a.tag-3,
+#widget-tags ul.tags li a.tag-4,
+#widget-tags ul.tags li a.tag-5,
+#widget-tags ul.tags li a.tag-6,
 .zinnia a:link, .zinnia a:visited {
     color: #9C8A6A;
     text-decoration: none;
@@ -113,4 +117,8 @@ h2.entry-title {
     padding: 1em 2em;
     background: none repeat scroll 0 0 #FBFBFB;
     margin-top: 10px;
+}
+
+ul.paginator li.current {
+    background-color: #9C8A6A;
 }
