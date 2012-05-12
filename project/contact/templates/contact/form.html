@@ -22,7 +22,7 @@ n'hésitez-pas, le formulaire est là pour ça!</p>
 
 <p>Olivier Larchevêque</p>
 
-<form class="contact" action="" method="post">
+<form class="contact" action="" method="post">{% csrf_token %}
   {{ form.as_p }}
   <p>
   <input type="submit" value="Envoyer" />

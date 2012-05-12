@@ -1,4 +1,4 @@
 
 from project.settings import *
 DEBUG=False
-TEMPLATE_DEBUG=True
+TEMPLATE_DEBUG=DEBUG
