@@ -46,7 +46,7 @@ INSTALLED_APPS = (
     'mptt',
     'zinnia',
     'project.contact',
-    'sentry.client',
+    'raven.contrib.django',
     'django_vu.client',
 )
 
@@ -55,11 +55,6 @@ TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
   'django.core.context_processors.static',
 )
 
-
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
-)
 
 TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), "templates"),

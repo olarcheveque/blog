@@ -5,7 +5,7 @@ body.zinnia {
 }
 
 
-#header h1 {
+.zinnia #header h1 {
     font-size: 3.3em;
     font-weight: normal;
     letter-spacing: 0.05em;
@@ -15,34 +15,34 @@ body.zinnia {
     text-shadow: none;
 }
 
-#header h1:first-letter {
+.zinnia #header h1:first-letter {
     color: #000000;
     font-size: 100%;
 }
 
-#header blockquote {
+.zinnia #header blockquote {
     margin: 0;
     font-size: 1em;
 }
 
-#header {
+.zinnia #header {
     margin-top: 2em;
     padding-bottom: 0.4em;
 }
 
-#header .top-navigation {
+.zinnia #header .top-navigation {
     margin: -2em 0 0;
 }
 
 .zinnia h1, .zinnia h2, .zinnia h3 {color: #333333;}
 
 .zinnia form legend,
-#widget-tags ul.tags li a.tag-1,
-#widget-tags ul.tags li a.tag-2,
-#widget-tags ul.tags li a.tag-3,
-#widget-tags ul.tags li a.tag-4,
-#widget-tags ul.tags li a.tag-5,
-#widget-tags ul.tags li a.tag-6,
+.zinnia #widget-tags ul.tags li a.tag-1,
+.zinnia #widget-tags ul.tags li a.tag-2,
+.zinnia #widget-tags ul.tags li a.tag-3,
+.zinnia #widget-tags ul.tags li a.tag-4,
+.zinnia #widget-tags ul.tags li a.tag-5,
+.zinnia #widget-tags ul.tags li a.tag-6,
 .zinnia a:link, .zinnia a:visited {
     color: #9C8A6A;
     text-decoration: none;
@@ -71,7 +71,7 @@ body.zinnia {
     margin-bottom: 5px;
 }
 
-#sidebar h3 {
+.zinnia #sidebar h3 {
     background: none repeat scroll 0 0 #FBFBFB;
     border-bottom: 1px solid #EAEAEA;
     border-top: 1px solid #EAEAEA;
@@ -80,45 +80,45 @@ body.zinnia {
     color: #999999;
 }
 
-p.entry-info {
+.zinnia p.entry-info {
     background: none;
     padding: 0;
 }
 
-ul.breadcrumbs {
+.zinnia ul.breadcrumbs {
     font-size: 1.4em;
 }
 
-#widget-search input[type="text"] {
+.zinnia #widget-search input[type="text"] {
     width: 68%;
 }
 
-h2.entry-title {
+.zinnia h2.entry-title {
     text-shadow: none;
 }
 
-.welcome {
+.zinnia .welcome {
     position: relative;
 }
-.welcome p {
+.zinnia .welcome p {
     margin-right: 122px;
 }
 
-#job {
+.zinnia #job {
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.entry-content h1 {font-size: 1.6em;}
-.entry-content h2 {font-size: 1em; font-weight: bold; }
+.zinnia .entry-content h1 {font-size: 1.6em;}
+.zinnia .entry-content h2 {font-size: 1em; font-weight: bold; }
 
-.hentry {
+.zinnia .hentry {
     padding: 1em 2em;
     background: none repeat scroll 0 0 #FBFBFB;
     margin-top: 10px;
 }
 
-ul.paginator li.current {
+.zinnia ul.paginator li.current {
     background-color: #9C8A6A;
 }
