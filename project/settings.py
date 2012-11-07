@@ -8,6 +8,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+SITE_ID = 1
 
 TIME_ZONE = 'America/Montreal'
 
