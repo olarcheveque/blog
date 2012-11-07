@@ -48,17 +48,12 @@ INSTALLED_APPS = (
     'zinnia',
     'project.contact',
     'raven.contrib.django',
-    'django_vu.client',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
     'django.core.context_processors.request',
     'django.core.context_processors.static',
 )
-
-#MIDDLEWARE_CLASSES = global_settings.MIDDLEWARE_CLASSES + (
-#    'raven.contrib.django.middleware.Sentry404CatchMiddleware',
-#)
 
 TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), "templates"),
