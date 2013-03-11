@@ -15,7 +15,6 @@ urlpatterns = patterns(
     url(r'^comments/', include('django.contrib.comments.urls')),
     (r'^admin/', include(admin.site.urls)),
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
-    (r'^vu/', include('django_vu.client.urls')),
 )
 
 if settings.DEBUG:
