@@ -13,6 +13,8 @@ body.zinnia {
     text-transform: uppercase;
     word-spacing: -0.1em;
     text-shadow: none;
+    background: none;
+    padding-left: 0px;
 }
 
 .zinnia #header h1:first-letter {
