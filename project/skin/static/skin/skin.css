@@ -89,6 +89,7 @@ body.zinnia {
 
 .zinnia ul.breadcrumbs {
     font-size: 1.4em;
+    margin-top: 1.4em;
 }
 
 .zinnia #widget-search input[type="text"] {
@@ -118,7 +119,6 @@ body.zinnia {
 .zinnia .hentry {
     padding: 1em 2em;
     background: none repeat scroll 0 0 #FBFBFB;
-    margin-top: 10px;
 }
 
 .zinnia ul.paginator li.current {
